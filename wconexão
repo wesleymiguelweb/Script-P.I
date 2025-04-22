@@ -1,0 +1,12 @@
+<?php
+// Conexão com o banco SQLite no seu caminho exato
+$caminhoBanco = "C:\\xampp\\htdocs\\Ecommerce\\estoque_ecomm.db"; 
+
+try {
+    $conexao = new PDO("sqlite:$caminhoBanco");
+    $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erro: " . $e->getMessage());
+}
+
+?>
